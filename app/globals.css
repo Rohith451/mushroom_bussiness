@@ -1,0 +1,101 @@
+
+    :root {
+      --green-dark: #2d4d34;
+      --cream: #f4f1eb;
+      --stone: #e3daca;
+      --text-dark: #333333;
+      --text-light: #ffffff;
+      --font-heading: 'Lora', serif;
+      --font-body: 'Montserrat', sans-serif;
+      --border-radius: 12px;
+      --shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+
+    h1, h2, h3 {
+      font-family: var(--font-heading);
+      color: var(--green-dark);
+      font-weight: 500;
+    }
+    
+    h2 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 1.8rem;
+      border: none;
+      border-radius: var(--border-radius);
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background-color: var(--green-dark);
+      color: var(--text-light);
+    }
+
+    .btn-primary:hover {
+      background-color: #1e3323;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    }
+    
+    /* Component-specific styles */
+    .product-card {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    }
+    
+    .form-input {
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .form-input:focus {
+      border-color: var(--green-dark);
+      box-shadow: 0 0 0 2px rgba(45, 77, 52, 0.2);
+      outline: none;
+    }
+    
+    .nav-link {
+        transition: border-color 0.2s ease;
+    }
+    .nav-link:hover {
+        border-color: var(--green-dark) !important;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      h2 {
+        font-size: 2rem;
+      }
+      .container {
+        padding: 3rem 1rem;
+      }
+      .about-grid {
+        grid-template-columns: 1fr !important;
+      }
+      .header-nav {
+        display: none !important; /* Simple responsive hide, a real app would use a hamburger menu */
+      }
+    }
+  
